@@ -706,11 +706,24 @@
           <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
           <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
           <p>
-            Pravin Mishra Portfolio v1.0 — Deployed on <5th Feb,2026> — By
-            Patience Gitonga.>
+            Pravin Mishra Portfolio v1.0 — Deployed on
+            <span id="deployDate"></span> — By Patience Gitonga.>
           </p>
         </div>
       </div>
     </footer>
+    <script>
+      const dateElement = document.getElementById("deployDate");
+
+      const today = new Date();
+
+      const options = {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      };
+
+      dateElement.textContent = today.toLocaleDateString("en-GB", options);
+    </script>
   </body>
 </html>
